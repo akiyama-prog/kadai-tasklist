@@ -6,11 +6,18 @@
     
     <div class="row">
         <div class="col-6">
-            {!! Form::model($task,['route'=>'tasks.create']) !!}
+            {!! Form::model($task,['route'=>'tasks.store']) !!}
             
                 <div class="form-group">
                     {!! Form::label('content','やること') !!}
                     {!! Form::text('content',null,['class' => 'form-control']) !!}
+                
+                
+                <div class="form-group">
+                    {!! Form::label('status','状況:') !!}
+                    {!! Form::text('status',null,['class' => 'form-control']) !!}
+                </div>
+            
                 </div>    
                     {!! Form::submit('追加',['class' => 'btn btn-primary']) !!}
             
